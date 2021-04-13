@@ -53,7 +53,7 @@ Output:
 */
 
 export function getAllDairy(arr) {
-    return [];
+    return arr.filter(item => item.cateogyr === 'dairy');
 }
 
 /*
@@ -94,5 +94,5 @@ Output:
 */
 
 export function listNamesOfAllFruits(arr) {
-    return [];
+    return arr.filter((object) => object.category === 'fruit').map((object) => object.id);
 }
