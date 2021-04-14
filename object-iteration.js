@@ -43,7 +43,18 @@ etc
 */
 
 export function makeWeirdStringFromKeys(someObject) {
-    return '';
+    Object.keys(someObject);
+    const name = Object.keys(someObject)[0];
+    const age = Object.keys(someObject)[1];
+    const type = Object.keys(someObject)[2];
+    //arr.map(item => names.push(item.name + item.type));
+    return `${name} + ${age} + ${type}`;
+}
+
+export function makeStringArray(arr) {
+    const names = [];
+    arr.map(item => names.push(item.name + item.type));
+    return names;
 }
 
 
