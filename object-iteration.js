@@ -29,25 +29,12 @@ export function makeMoreScreamingKeys(someObject) {
     return scream;
 }
 
-/*
-Output:
-`8truckvroom`
-or
-`truckvroom8`
-or
-`truck8vroom`
-,
-etc
-
-(we cannot control the order that these appear in without extra work, so any of these outputs are acceptable)
-*/
 
 export function makeWeirdStringFromKeys(someObject) {
     Object.keys(someObject);
     const name = Object.keys(someObject)[0];
     const age = Object.keys(someObject)[1];
     const type = Object.keys(someObject)[2];
-    //arr.map(item => names.push(item.name + item.type));
     return `${name} + ${age} + ${type}`;
 }
 
@@ -57,16 +44,22 @@ export function makeStringArray(arr) {
     return names;
 }
 
-
-/*
-Output:
-[ 
-    ['wheels', 8],
-    ['type', 'truck'],
-    ['goes', 'vroom'],
-]
-*/
-
 export function makeTuples(someObject) {
-    return [];
+    const keys = Object.keys(someObject);
+    const values = Object.values(someObject);
+    const arr1 = [];
+    const arr2 = [];
+    const arr3 = [];
+    arr1.push(keys[0], values[0]);
+    arr2.push(keys[1], values[1]);
+    arr3.push(keys[2], values[2]);
+    const expectedArray = []
+    expectedArray.push(arr1, arr2, arr3);
+    return expectedArray;
 }
+
+const expected = [
+    ['name', 'scooter'],
+    ['age', 1],
+    ['type', 'puppy']
+];
