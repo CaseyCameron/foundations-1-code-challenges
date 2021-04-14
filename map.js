@@ -60,31 +60,18 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    const names = [];
+    arr.map(item => names.push(item.name + item.type));
+    return names;
 }
-
-/*
-Output:
-
-[
-    [
-        ['name', 'spot'], 
-        ['type', 'dog']
-    ], 
-    [
-        ['name', 'rover'], 
-        ['type', 'dog']
-    ], 
-    [
-        ['name', 'jumpy'], 
-        ['type', 'frog']
-    ],
-    [ 
-        ['name', 'einstein'], 
-        ['type', 'cat']
-    ]
-*/
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+
+    return arr.map(item => ([["name", item.name], ["type", item.type]]));
+
 }
+
+// [['name', 'scooter'], ['type', 'puppy']], 
+// [['name', 'sassy'], ['type', 'puppy']], 
+// [['name', 'legzo'], ['type', 'frog']], 
+// [['name', 'fluff'], ['type', 'squirrel']]

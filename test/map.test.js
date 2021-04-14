@@ -69,7 +69,7 @@ test('should return a shouting array', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should return a proper array of strings', (expect) => {
+test('should return a proper array of strings', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = ['scooterpuppy', 'sassypuppy', 'legzofrog', 'fluffsquirrel'];
@@ -82,7 +82,7 @@ skip('should return a proper array of strings', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should return a proper array of arrays', (expect) => {
+test('should return a proper array of arrays', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = [
