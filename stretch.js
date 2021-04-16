@@ -50,7 +50,8 @@ Output:
 */
 
 export function organizePricesByKey(arr) {
-    return {};
+    const someArray = arr.sort((a, b) => a.price - b.price);
+    return someArray;
 }
 
 /*
