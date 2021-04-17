@@ -40,7 +40,7 @@ Input:
 
 /*
 Output: 
-{
+//{
     apple: 3,
     banana: 1,
     'dog food': 5,
@@ -49,9 +49,20 @@ Output:
 }
 */
 
+// { 
+//     id: 'apple',
+//     price: 3,
+//     quantity: 2,
+//     category: 'fruit'
+// },
+
 export function organizePricesByKey(arr) {
-    const someArray = arr.sort((a, b) => a.price - b.price);
-    return someArray;
+    let output = {};
+    
+    arr.forEach((item) => {
+        output[item.id] = item.price; //item.id becomes the key. item.price the value
+    });
+    return output;
 }
 
 /*
@@ -91,9 +102,13 @@ Output:
 */
 
 export function makeAHashMap(arr) {
-    return {};
+    let output = {};
+    
+    arr.forEach((item) => {
+        output[item.id] = item; //item.id becomes the key. item (the whole object) becomes the value
+    });
+    return output;
 }
-
 
 /*
 Output: 
@@ -105,5 +120,15 @@ Output:
 */
 
 export function countByCategory(arr) {
-    return {};
+    let output = {};
+    
+    arr.forEach((item) => {
+        if (!output[item.category]){ //if there is no value in output's item.category's key
+            output[item.category] = 1; //initialize it
+        } else {
+            output[item.category]++; //otherwise add to it
+        }
+    });
+
+    return output;
 }
