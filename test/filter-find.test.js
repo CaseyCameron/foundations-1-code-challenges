@@ -41,7 +41,7 @@ const groceries = [
     },
 ];
 
-test('should return all dairy', (expect) => {
+test('filter should return all dairy', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = [{ 
@@ -68,7 +68,7 @@ test('should return all dairy', (expect) => {
 });
 
 
-test('should return all fruits that cost more than 2', (expect) => {
+test('filter should return all fruits that cost more than 2', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = [{ 
@@ -88,7 +88,7 @@ test('should return all fruits that cost more than 2', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-test('should return the cheese', (expect) => {
+test('filter should return the cheese', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = { 
@@ -107,7 +107,7 @@ test('should return the cheese', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-test('should list all the fruit names', (expect) => {
+test('filter should list all the fruit names', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = ['orange', 'kiwi'];

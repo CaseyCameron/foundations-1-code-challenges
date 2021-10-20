@@ -12,7 +12,7 @@ const pet = {
     type: 'puppy',
 };
 
-test('should return an object with screaming keys', (expect) => {
+test('object should return an object with screaming keys', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = {
@@ -32,7 +32,7 @@ test('should return an object with screaming keys', (expect) => {
 
 
 
-test('should make a string from the keys', (expect) => {
+test('object should make a string from the keys', (expect) => {
     //Arrange
     // Set up your arguments and expectations    
     //Act 
@@ -45,7 +45,7 @@ test('should make a string from the keys', (expect) => {
     expect.deepEqual(true, shouldBeTrue);
 });
 
-test('should return tuples', (expect) => {
+test('object should return tuples', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = [

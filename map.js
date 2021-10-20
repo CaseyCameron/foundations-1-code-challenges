@@ -49,7 +49,7 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return arr.map(item => ({name: item.name.toUpperCase(), type: item.type}));
+    return arr.map(item => ({ name: item.name.toUpperCase(), type: item.type }));
 }
 
 
