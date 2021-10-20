@@ -1,7 +1,5 @@
 // solve these problems using any method you like!
 
-
-
 export function organizePricesByKey(arr) {
     return arr.reduce((acc, current) => {
         acc[current.id] = current.price;
@@ -17,15 +15,6 @@ export function makeAHashMap(arr) {
     }, {});
 }
 
-
-/*
-Output: 
-{
-    fruit: 2,
-    other: 1,
-    dairy: 2
-}
-*/
 
 export function countByCategory(arr) {
     return arr.reduce((acc, current) => {
